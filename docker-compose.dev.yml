@@ -1,0 +1,11 @@
+version: '2.2'
+services:
+  server:
+    build: .
+    restart: always
+    network_mode: bridge
+    ports:
+      - "8444:443"
+      - "8081:8080"
+
+# docker-compose -f docker-compose.dev.yml up --build
